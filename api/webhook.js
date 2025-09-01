@@ -83,10 +83,9 @@ export default async function handler(req, res) {
                     { headers: { Authorization: `Bearer ${process.env.WHATSAPP_TOKEN}`, "Content-Type": "application/json" } }
                 );
 
-                return res.status(200).json({ ok: true }); // RESPUESTA ÚNICA
+                return res.status(200).json({ ok: true, reply });
             }
 
-            // Si no es mensaje de texto, ACK sin procesar
             return res.status(200).json({ ok: true });
         } catch (err) {
             console.error("Webhook error:", err?.response?.data || err.message);
