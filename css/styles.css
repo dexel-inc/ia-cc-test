@@ -1,0 +1,66 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+video {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+.banner {
+    border-radius: 8px;
+}
+
+.background-b-to-r {
+    background: #cd8261;
+    border-radius: 8px 8px 0 0;
+    background: linear-gradient(90deg,rgba(110, 56, 54, 1) 0%, rgba(217, 148, 105, 1) 100%);
+}
+
+.content {
+    border-radius: 0 0 8px 8px;
+    background: url('../assets/background.png') no-repeat center bottom/cover;
+}
+
+.banner__logo-arkadia {
+    width: 110px;
+}
+
+.banner__logo-arkadia-bottom {
+    width: 130px;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+    margin: 18px;
+    padding-left: 0;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.banner__mute-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    fill: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}

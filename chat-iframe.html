@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<script async src="https://cdn.botpress.cloud/webchat/v2.2/inject.js" onload="initBotpress()"></script>
+
+<script>
+  function initBotpress() {
+    console.log("Inicializando Botpress...");
+
+    window.botpress.init({
+      "botId": "f387aa3f-7556-4260-849f-4997627b9d23",
+      "configuration": {
+        "version": "v2",
+        "botName": "Santa Claus",
+        "botAvatar": "assets/images.jpeg",
+        "botDescription": "Ho ho ho! Puedo ayudarle con sus preguntas relacionadas con la variedad de tiendas y productos dentro de el centro Comercial Arkadia",
+        "website": {},
+        "email": {},
+        "phone": {},
+        "termsOfService": {},
+        "privacyPolicy": {},
+        "color": "#eb3131",
+        "variant": "soft",
+        "headerVariant": "glass",
+        "themeMode": "dark",
+        "enableReset": true,
+        "fontFamily": "rubik",
+        "radius": 4,
+        "showPoweredBy": false,
+        "feedbackEnabled": false,
+        "additionalStylesheetUrl": "css/botpress.css",
+        "allowFileUpload": false,
+        "composerPlaceholder": "Escribe aquí..."
+      },
+      "clientId": "8f398333-7b02-455b-b889-b24f705b2c33",
+    });
+
+    // Esperar a que el chat esté listo ANTES de abrirlo
+    let intentos = 0;
+    function intentarAbrirChat() {
+      if (window.botpress && window.botpress.open) {
+        console.log("Chat abierto automáticamente.");
+        window.botpress.open();
+      } else {
+        intentos++;
+        if (intentos < 10) {
+          console.warn(`Intento ${intentos}: Botpress aún no está listo, reintentando...`);
+          setTimeout(intentarAbrirChat, 1000);
+        } else {
+          console.error("No se pudo abrir el chat después de varios intentos.");
+        }
+      }
+    }
+
+    window.botpress.on("webchat:ready", () => {
+      console.log("Botpress está listo, intentando abrir el chat...");
+      intentarAbrirChat();
+    });
+
+    setTimeout(intentarAbrirChat, 1000);
+  }
+</script>
+<style>
+  iframe[name="fab"] {
+    display: none !important;
+  }
+  .bpWebchat {
+    border-radius: 0 !important;
+  }
+</style>
+</body>
+</html>

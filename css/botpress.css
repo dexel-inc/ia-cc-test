@@ -1,0 +1,126 @@
+.bpContainer,
+.bpw-container,
+.bpw-chat {
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 40px !important;
+    overflow: hidden !important;
+    background-color: transparent;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.bpHeaderContainer,
+.bpHeaderContentContainer,
+.bpHeaderContentAvatarContainer,
+.bpHeaderContentAvatarImage,
+.bpw-header-avatar,
+.bpHeaderContentActionsIcons,
+.bpModalDialogTitleCloseIcon,
+.bpModalDialogNewConversationButton,
+.bpw-conversation-deletion {
+    display: none !important;
+}
+
+.bpMessageListContainer {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    min-height: 60vh;
+}
+
+.bpMessageContainer[data-direction="incoming"] .bpMessageBlocksBubble,
+.bpMessageContainer[data-direction="outgoing"] .bpMessageBlocksBubble {
+    background: #ffffff8a !important;
+    color: #000000 !important;
+    border-radius: 18px !important;
+    font-size: 14px !important;
+    margin: 10px 0 !important;
+    padding: 16px 22px !important;
+    max-width: 80%;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: none !important;
+}
+
+.bpContainer {
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.bpComposerContainer {
+    width: 100% !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bpComposerInput {
+    width: 100%;
+    min-height: 60px !important;
+    border-radius: 30px !important;
+    background: #000 !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    padding: 18px 28px !important;
+    margin: 0 !important;
+    margin-top: 8px !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-family: "Montserrat", sans-serif;
+}
+
+.bpComposerInput::placeholder {
+    color: #fff !important;
+    opacity: 1 !important;
+    font-size: 16px !important;
+    font-family: "Montserrat", sans-serif;
+}
+
+.bpComposerButtonContainer,
+.bpComposerButtonIcon,
+.bpComposerContainer button {
+    display: none !important;
+}
+
+@media (max-width: 480px) {
+    .bpContainer,
+    .bpw-container,
+    .bpw-chat {
+        border: none !important;
+        border-radius: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        box-shadow: none !important;
+    }
+    .bpComposerInput {
+        font-size: 14px !important;
+        min-height: 48px !important;
+        padding: 12px 18px !important;
+    }
+}
+
+.bpMessageAvatarContainer {
+    display: none !important;
+}
+
+.bpWebchat {
+    position: absolute;
+    width: 100% !important;
+    border-radius: 0 !important;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.bpOpen {
+    border-radius: 0 !important;
+}
